@@ -7,3 +7,7 @@ img{
 	max-width: 100%;
 	height: auto;
 }
+
+*{
+	box-sizing: border-box; /* The star select all elements on the page and the property box-sizing: border-box, limits all boxes on the page to 100%, fixing conflicts in size */
+}
