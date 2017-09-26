@@ -462,7 +462,13 @@ img{
 
 *{
 	-webkit-box-sizing: border-box;
-	        box-sizing: border-box; /* The star select all elements on the page and the property box-sizing: border-box, limits all boxes on the page to 100%, fixing conflicts in size */
+	        box-sizing: border-box; /* The star select all elements on the page and the property 
+box-sizing: border-box, limits all boxes on the page to 100%, fixing conflicts in 
+size and acting together in the _wrapper element overflow */
+}
+
+a{
+	color: #d59541;
 }
 
 .large-hero {
@@ -557,16 +563,27 @@ img{
 	}
 
 .wrapper{
-	overflow: hidden; /* everything that goes beyond the size of the wrapper, is hidden */
+	overflow: hidden; /* everything that goes beyond the size of the wrapper, is hidden. combines with * box-sizing: border-box */
 	padding-left: 18px;
 	padding-right: 18px;
-	max-width: 1200px;
+	max-width: 1236px; /* 1200 + 36px to compensate the border box and padding fx */
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .wrapper--medium{
 		max-width: 976px;
+	}
+
+.wrapper--b-margin{
+	margin-bottom: 1rem;
+	}
+
+@media (min-width: 530px) {
+
+.wrapper--b-margin{
+			margin-bottom: 3.875rem
+	}
 	}
 
 .wrapper .wrapper{
@@ -644,6 +661,10 @@ img{
 		margin-bottom: 1.6em;
 	}
 
+.headline--no-t-margin{
+		margin-top: 0;
+	}
+
 /* This mixin is used to clear rows and fix them into the page, not letting content overflow each other */
 
 .row::after{
@@ -660,16 +681,49 @@ img{
 		padding-right: 65px;
 	}
 
+.row__b-margin-until-medium{
+		margin-bottom: 1rem;
+	}
+
 @media (min-width: 800px){
+		
+		.row__b-margin-until-medium{
+		margin-bottom: 0;
+		}
+		
 		.row__medium-4{
 			float: left;
 			width: 33.33%;
+		}
+		
+		.row__medium-4--larger{
+			width: 37%;
 		}
 		
 		.row__medium-8{
 			float: left;
 			width: 66.66%;
 		}
+		
+		.row__medium-8--smaller{
+			width: 63%;
+		}
+	}
+
+.generic-content-container p{
+		line-height: 1.65;
+		margin: 1.8rem 0; 
+	}
+
+@media (min-width: 530px) {
+
+.generic-content-container{
+		font-size: 1.125rem
+}
+	}
+
+.generic-content-container p a {
+		font-weight: 700;
 	}
 
 

@@ -9,5 +9,11 @@ img{
 }
 
 *{
-	box-sizing: border-box; /* The star select all elements on the page and the property box-sizing: border-box, limits all boxes on the page to 100%, fixing conflicts in size */
+	box-sizing: border-box; /* The star select all elements on the page and the property 
+box-sizing: border-box, limits all boxes on the page to 100%, fixing conflicts in 
+size and acting together in the _wrapper element overflow */
+}
+
+a{
+	color: $mainOrange;
 }

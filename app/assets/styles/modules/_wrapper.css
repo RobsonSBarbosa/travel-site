@@ -1,13 +1,21 @@
 .wrapper{
-	overflow: hidden; /* everything that goes beyond the size of the wrapper, is hidden */
+	overflow: hidden; /* everything that goes beyond the size of the wrapper, is hidden. combines with * box-sizing: border-box */
 	padding-left: 18px;
 	padding-right: 18px;
-	max-width: 1200px;
+	max-width: 1236px; /* 1200 + 36px to compensate the border box and padding fx */
 	margin-left: auto;
 	margin-right: auto;
 	
 	&--medium{
 		max-width: 976px;
+	}
+	
+	&--b-margin{
+	margin-bottom: 1rem;
+	
+		@mixin atSmall{
+			margin-bottom: 3.875rem;
+		}
 	}
 	
 	.wrapper{
