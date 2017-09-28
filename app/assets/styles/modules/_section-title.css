@@ -9,6 +9,10 @@
 	strong {
 		font-weight: 500;
 	}
+
+	&--blue{
+		color: $mainBlue; 
+	}
 	
 	&__icon{
 		display: block; /* makes the icon stay in a different line for small screens*/
@@ -17,6 +21,8 @@
 		margin-bottom: 0.6rem;
 		
 		@mixin atSmall{
+			position: relative;
+			top: 8px;
 			margin-right: .5rem;
 			margin-left: 0;
 			display: inline-block;/* makes the icon fall back into place on large screens */ 
