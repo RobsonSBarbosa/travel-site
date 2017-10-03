@@ -1,35 +1,32 @@
 .feature-item {
-    position: relative;
-    padding-bottom: 2.5rem;
+  position: relative;
+  padding-bottom: 2.5rem;
 
-    @mixin atSmall {
-        padding-left: 94px;
-    }
+  @mixin atSmall {
+    padding-left: 94px;
+  }
 
-    &__icon{
+  &__icon {
     display: block;
     margin: 0 auto;
 
-        @mixin atSmall {
-            position: absolute; /* This fixes the position of the icon inside the relative position of the feature-item */
-            left: 0;
-        }
-}
+    @mixin atSmall {
+      position: absolute;
+      left: 0;
+    }
+  }
 
-&__title {
+  &__title {
     font-size: 1.6rem;
     font-weight: 300;
-    margin-top: 0.7em;
-    margin-bottom: 0.8rem;
+    margin-top: .7em;
+    margin-bottom: .8rem;
     text-align: center;
 
     @mixin atSmall {
-        margin-top: 1em;
-        font-size: 1.875rem;
-        text-align: left;
+      text-align: left;
+      margin-top: 1em;
+      font-size: 1.875rem;
     }
-}
-	
-	
-	
+  }
 }
